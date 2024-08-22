@@ -1,5 +1,6 @@
 
 import Home  from "./pages/Home";
+import Benefits from "./pages/Benefits"
 import GlobalStyles from "./styles/GlobalStyles";
 
 
@@ -9,6 +10,7 @@ function App() {
     <>
         <GlobalStyles />
         <Home />
+        <Benefits />
      
       
     </>

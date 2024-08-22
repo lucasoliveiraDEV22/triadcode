@@ -28,6 +28,7 @@ export const Image = styled.img`
   width: 70px;
   height: 70px;
   border-radius: 30px;
+  padding: 1rem;
 `;
 
 export const Nav = styled.nav`
@@ -73,7 +74,8 @@ export const ContainerLeft = styled.div`
   }
 
   h1 {
-    padding: 1rem;
+    padding: 0.3rem;
+    overflow-y: hidden;
     color: ${theme.colors.white};
     width: 609px;
     height: 282px;
@@ -90,9 +92,65 @@ export const ContainerLeft = styled.div`
   }
 `;
 
-export const ContainerRight = styled.div``;
+export const ContainerRight = styled.div`
+  margin-right: 3rem;
+  overflow: visible;
+`;
 
-export const Elements = styled.div``;
+export const Elements = styled.div`
+  position: relative; /* Para permitir o posicionamento absoluto dos elementos filhos */
+  right: -100%; /* Inicia fora da tela à direita */
+  transition: right 0.5s ease; /* Transição suave ao mover a div */
+  bottom: 70px;
+  width: 275px;
+  height: 150px;
+  border-radius: 5px;
+  right: 20%;
+  background: #d9d9d9;
+  box-shadow: 0px 20px 35px 0px rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  h1 {
+    color: #000;
+    font-size: 20px;
+    line-height: normal;
+    text-transform: capitalize;
+   
+  }
+
+  p {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 10px; /* Para garantir espaço suficiente abaixo do parágrafo */
+  }
+  &::before, /* Primeira aspa */
+  &::after {
+    /* Segunda aspa */
+    content: '"';
+    font-size: 50px;
+    color: #000;
+    position: absolute;
+    top: 0;
+  }
+
+  &::before {
+    left: 0; /* Alinha a primeira aspa à esquerda */
+  }
+
+  &::after {
+    right: 0; /* Alinha a segunda aspa à direita */
+    top: 110px; /* Posiciona a segunda aspa abaixo do parágrafo */
+  }
+  &.visible {
+    right: 5%; /* Define a posição final quando visível */
+  }
+`;
 
 export const Google = styled.img`
   width: 470px;
@@ -100,15 +158,48 @@ export const Google = styled.img`
 `;
 
 export const Paragraph = styled.p`
-padding-left: 1rem;
+  padding-left: 0.3rem;
+  overflow-y: hidden;
   color: ${theme.colors.white};
   margin-top: 1.5625rem;
   width: 502px;
   height: 114px;
   flex-shrink: 0;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  text-transform: capitalize;
+  
+`;
+
+export const GreenSmoke = styled.div`
+  width: 510px;
+  height: 510px;
+  margin-left: -217px;
+  overflow-y: hidden;
+  
+  z-index: -1;
+  position: relative;
+  bottom: 100px;
+  flex-shrink: 0;
+  border-radius: 510px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(132, 204, 22, 0.5) 0%,
+    rgba(132, 204, 22, 0) 100%
+  );
+`;
+
+export const GreenSmokeFooter = styled.div`
+  width: 420px;
+  height: 420px;
+  flex-shrink: 0;
+  position: absolute;
+  z-index: 1;
+  border-radius: 420px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(132, 204, 22, 0.5) 0%,
+    rgba(132, 204, 22, 0) 100%
+  );
 `;
