@@ -17,7 +17,8 @@ function Home() {
   };
 
   return (
-    <><C.Header>
+    <>
+    <C.Header>
       <C.Title>Triad<span>Code</span></C.Title>
       <C.Nav>
         <ul>

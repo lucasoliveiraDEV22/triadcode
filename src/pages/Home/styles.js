@@ -1,6 +1,10 @@
 import { styled } from 'styled-components';
 import { theme } from '../../styles/theme';
 
+export const HomeBg = styled.ellipse`
+
+`
+
 export const Header = styled.div`
   margin: 0;
   padding: 25px;
@@ -59,6 +63,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerLeft = styled.div`
+
   padding: 2rem;
   h5 {
     padding-left: 3rem;
@@ -172,14 +177,14 @@ export const Paragraph = styled.p`
   
 `;
 
-export const GreenSmoke = styled.div`
+export const GreenSmoke = styled.ellipse`
   width: 510px;
   height: 510px;
   margin-left: -217px;
   overflow-y: hidden;
-  
+  position: absolute;
   z-index: -1;
-  position: relative;
+  
   bottom: 100px;
   flex-shrink: 0;
   border-radius: 510px;
@@ -190,16 +195,4 @@ export const GreenSmoke = styled.div`
   );
 `;
 
-export const GreenSmokeFooter = styled.div`
-  width: 420px;
-  height: 420px;
-  flex-shrink: 0;
-  position: absolute;
-  z-index: 1;
-  border-radius: 420px;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(132, 204, 22, 0.5) 0%,
-    rgba(132, 204, 22, 0) 100%
-  );
-`;
+
