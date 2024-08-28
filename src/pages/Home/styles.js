@@ -6,10 +6,12 @@ export const HomeBg = styled.ellipse`
 `
 
 export const Header = styled.div`
-  margin: 0;
+  margin: auto 0;
   padding: 25px;
+  overflow-y: hidden;
   width: 100vw;
-  height: 100px;
+  position: fixed;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,6 +66,7 @@ export const Container = styled.div`
 
 export const ContainerLeft = styled.div`
 
+  margin-top: 4rem;
   padding: 2rem;
   h5 {
     padding-left: 3rem;
@@ -79,11 +82,11 @@ export const ContainerLeft = styled.div`
   }
 
   h1 {
-    padding: 0.3rem;
+    padding: 0.1rem;
     overflow-y: hidden;
     color: ${theme.colors.white};
-    width: 609px;
-    height: 282px;
+    width: 680px;
+    height: 570px;
     flex-shrink: 0;
     font-size: 64px;
     font-style: normal;
@@ -102,60 +105,7 @@ export const ContainerRight = styled.div`
   overflow: visible;
 `;
 
-export const Elements = styled.div`
-  position: relative; /* Para permitir o posicionamento absoluto dos elementos filhos */
-  right: -100%; /* Inicia fora da tela à direita */
-  transition: right 0.5s ease; /* Transição suave ao mover a div */
-  bottom: 70px;
-  width: 275px;
-  height: 150px;
-  border-radius: 5px;
-  right: 20%;
-  background: #d9d9d9;
-  box-shadow: 0px 20px 35px 0px rgba(255, 255, 255, 0.15);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: visible;
-  h1 {
-    color: #000;
-    font-size: 20px;
-    line-height: normal;
-    text-transform: capitalize;
-   
-  }
 
-  p {
-    color: #000;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: capitalize;
-    margin-bottom: 10px; /* Para garantir espaço suficiente abaixo do parágrafo */
-  }
-  &::before, /* Primeira aspa */
-  &::after {
-    /* Segunda aspa */
-    content: '"';
-    font-size: 50px;
-    color: #000;
-    position: absolute;
-    top: 0;
-  }
-
-  &::before {
-    left: 0; /* Alinha a primeira aspa à esquerda */
-  }
-
-  &::after {
-    right: 0; /* Alinha a segunda aspa à direita */
-    top: 110px; /* Posiciona a segunda aspa abaixo do parágrafo */
-  }
-  &.visible {
-    right: 5%; /* Define a posição final quando visível */
-  }
-`;
 
 export const Google = styled.img`
   width: 470px;
@@ -164,9 +114,8 @@ export const Google = styled.img`
 
 export const Paragraph = styled.p`
   padding-left: 0.3rem;
-  overflow-y: hidden;
   color: ${theme.colors.white};
-  margin-top: 1.5625rem;
+  margin-top: 4rem;
   width: 502px;
   height: 114px;
   flex-shrink: 0;

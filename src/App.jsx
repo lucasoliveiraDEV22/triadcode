@@ -4,6 +4,9 @@ import Benefits from "./pages/Benefits"
 import Google from "./pages/Google"
 import GlobalStyles from "./styles/GlobalStyles";
 import Advantages from "./pages/Advantages"
+import Triggers from "./pages/Triggers";
+import Statements from "./pages/Statements";
+
 
 
 function App() {
@@ -16,6 +19,8 @@ function App() {
         <Benefits />
         <Google />
         <Advantages/>
+        <Triggers />
+        <Statements />
      
       
     </>
