@@ -6,6 +6,7 @@ import { theme } from '../../styles/theme';
 import WordGoogle from '../../components/WordGoogle';
 
 
+
 function Benefits(){
     return (
         <>
